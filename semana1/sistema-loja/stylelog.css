@@ -1,3 +1,15 @@
+header{
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 4px 4px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    min-height: auto;
+    max-height: auto;
+    
+}
+
 td{
     text-align: center;
 }
@@ -8,7 +20,4 @@ body{
 nav{
     margin-top: 8px;  
     font-size: 14pt;
-}
-table{
-
 }
