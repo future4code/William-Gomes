@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(164, 165, 221);
+}
+nav{
+    margin-top: 8px;  
+    font-size: 14pt;
+}
+form{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 160px;
+    line-height: 40px;  
+    border-radius: 25px; 
+}
+.formulario{
+    background-image: radial-gradient(rgb(255, 255, 255),rgb(158, 158, 241));
+  border-radius: 15px;
+}
+footer{
+    font-size: 16pt;
+
+}

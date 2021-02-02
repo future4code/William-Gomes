@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(164, 165, 221);
+}
+header{
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 4px 4px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    min-height: auto;
+    max-height: auto;
+    
+}
+nav{
+    margin-top: 8px;  
+    font-size: 14pt;
+}
+.img{
+   position: relative;
+}
+footer{
+    margin-top: 8px;
+    font-size: 13pt;
+}
+
+
