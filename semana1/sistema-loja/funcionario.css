@@ -6,12 +6,7 @@ header{
     box-sizing: border-box;
     border-radius: 8px;
     min-height: auto;
-    max-height: auto;
-    
-}
-
-td{
-    text-align: center;
+    max-height: auto;   
 }
 
 body{
@@ -20,4 +15,20 @@ body{
 nav{
     margin-top: 8px;  
     font-size: 14pt;
+}
+picture{
+    background-color: rgba(223, 90, 90, 0.993);
+    
+}
+footer{
+   
+    font-size: 13pt;
+    margin-top: 160px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 16px;
+    border-radius: 15px;
+    border-width: 60px;
+    
+    
 }

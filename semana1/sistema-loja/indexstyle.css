@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(164, 165, 221);
+}
 header{
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,15 +12,16 @@ header{
     max-height: auto;
     
 }
-
-td{
-    text-align: center;
-}
-
-body{
-    background-color: rgb(164, 165, 221);
-}
 nav{
     margin-top: 8px;  
     font-size: 14pt;
 }
+.img{
+   position: relative;
+}
+footer{
+    margin-top: 8px;
+    font-size: 13pt;
+}
+
+
