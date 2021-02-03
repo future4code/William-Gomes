@@ -1,0 +1,52 @@
+
+body{
+        background-color: #a4a5dd;
+}
+header{
+    width: 350px;
+    margin: auto;
+}
+nav{
+        margin-top: 8px;  
+        font-size: 14pt;
+        width: 600px;
+        margin: auto;
+}
+
+ul{
+    font-size: 25px;
+    line-height: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+label{
+    font-size: 25px;
+    
+}
+table{
+    font-size: 25px;
+}
+.cartao{
+    width: 50%;
+}
+button{
+    display: inline;
+    width: 100%;
+    font-size: medium;
+    height: 100px;
+    margin-left: 9px;
+    background-color: #a4a5dd;
+    border-color: transparent;
+}
+form{
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    width: 500px;
+    border-radius:5px;
+    margin: auto;
+        
+}
+footer{
+    font-size: 14pt;
+    position: fixed;
+    bottom: 0%;
+}
