@@ -115,7 +115,7 @@ div:last-child {
 
 table {
     width: 60%;
-    
+    margin: auto;
     font-family:'Arial Narrow Bold', sans-serif;
 
 
@@ -149,6 +149,12 @@ td button:active{
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    display: block;
+    margin: auto;
+    margin-top: 200px;
+
+    
+
 }
 
 #back-button:hover {
