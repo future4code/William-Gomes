@@ -1,0 +1,38 @@
+
+body{
+    background-color: #a4a5dd;
+}
+header{
+width: 350px;
+margin: auto;
+}
+nav{
+    margin-top: 8px;  
+    font-size: 14pt;
+    width: 600px;
+    margin: auto;
+}
+
+ul{
+font-size: 25px;
+line-height: 50px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table{
+font-size: 25px;
+}
+
+.input{
+    font-size: 16pt;
+    width: 290px;
+    margin: auto;
+    display: block;
+
+}
+    
+
+footer{
+font-size: 14pt;
+position: fixed;
+bottom: 0%;
+}
