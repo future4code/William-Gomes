@@ -122,10 +122,15 @@ td button {
     width: 150px;
     height: 30px;
     border-radius: 5px;
-    color: black;
+    font-size: 14pt;
     margin-left: 120px;
 }
-
+td button:hover{
+    background-color: #c9c4ba; 
+}
+td button:active{
+    background-color: #444444; 
+}
 .container-do-search {
     margin-top: 20px;
     height: 100px;
