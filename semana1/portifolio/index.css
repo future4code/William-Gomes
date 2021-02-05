@@ -45,11 +45,12 @@ section{
     background-color: rgb(164, 146, 228);    margin-left: 20%;
     margin-top:-250px;
     width: 1100px;
-    height: 240px;
+    height: 280px;
     border-style: double;
     border-radius:16px;
     text-align: center;
     font-family: 'Glegoo', serif;
+    font-size: 16pt;
 }
 table{
     position: static;

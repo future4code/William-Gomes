@@ -2,3 +2,82 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: rgba(61, 58, 58, 0.219);
+}
+header{
+    background-color: rgb(164, 146, 228);   
+}
+#perfil{
+    height: 100px;
+    width: 90px;
+    border-radius: 4px;
+    margin-left: 150px;
+    margin-top: 6px;
+    display: inline;
+}
+h1{
+    display: inline-block;
+    margin-left: 200px;    
+    font-size: 32pt;
+    font-family: 'Cairo', sans-serif;
+    font-style: oblique;
+    font-weight: 300;
+}
+.redes-sociais{
+    display: inline;
+    position: absolute;
+    margin-left:300px;
+}
+nav{
+    line-height: 50px;
+    background-color: rgb(164, 146, 228);     width:200px;
+    height:295px;
+    margin: 10px 8px;
+    padding-left: 30px;
+    border-radius: 4%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    
+}
+section{
+    background-color: rgb(164, 146, 228);    margin-left: 20%;
+    margin-top:-250px;
+    width: 1100px;
+    height: 350px;
+    border-style: double;
+    border-radius:16px;
+    text-align: center;
+    font-family: 'Glegoo', serif;
+}
+section p{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 16pt;
+    font-family: cursive;
+}
+#open{
+    margin-top: 50px;
+    line-height: 30px;
+
+    width: 300px;
+    display: block;
+    margin-left: 350px;
+    text-align: center;
+    font-size: 16pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(2, 2, 2);
+
+}
+
+footer{
+    background-color: rgb(164, 146, 228);   
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;    
+}
+form{
+    line-height: 35px;
+    display: inline;
+}

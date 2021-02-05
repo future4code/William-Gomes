@@ -53,6 +53,8 @@ section{
 section p{
     text-align: left;
     margin-left: 10px;
+    font-size: 16pt;
+    font-family: cursive;
 }
 article{
     margin-top: 15px;
