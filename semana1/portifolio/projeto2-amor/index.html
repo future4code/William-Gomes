@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+
+<style>
+     body {
+         background-color: rgb(124, 124, 211);
+         font: normal 18pt arial;
+        text-align: center;
+        margin-top: 300px;
+          
+     }
+        
+</style>
+
+
+</head>
+<body>
+    <h1>Saiba se eu te amo</h1>
+
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+    <input type="button" value="verificando" onclick="verificar()">
+    <div id="res">
+    
+       
+
+  <script>
+      function verificar() {
+        let txtnome = document.querySelector('input#nome')
+        nomes = String(txtnome.value)
+        let res = document.querySelector('div#res')
+       
+        if (nomes === 'adeise') {
+            res.innerHTML = `te amo amorzinho`
+        }
+
+        else if (nomes === 'theo') {
+            res.innerHTML = 'te amo filho'
+        }
+    
+            else{
+            res.innerHTML = 'sai loko'
+            }
+        }
+        
+        
+        
+        
+    </script>
+</body>
+    
+</html>
