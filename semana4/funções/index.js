@@ -108,3 +108,35 @@ function ex(string) {
 console.log(ex(palavra))
 
  ---------------------------------------*/
+
+
+
+// EX 6
+
+/* -------------A)-------------
+const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+
+function  arrayzinho(a,b,c,d,e,f,g,h,i,j) {
+  
+
+return arrayzinho.length
+}
+console.log(arrayzinho(array))*/
+
+//-------------------------------------------------
+
+/*
+const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+
+function parImpar(a,b,c,d,e,f,g,h,i,j) {
+  
+  for (let index = 0; index <= parImpar.length; index++) {
+    
+    let element = parImpar(index);
+  
+   
+  }
+
+}
+
+console.log(parImpar(array))*/
