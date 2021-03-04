@@ -33,11 +33,6 @@ let information = {
 
 function enviado() {
    
-    conteudoEnviado.innerHTML = `${titulo.value} 
-     
-    ${autor.value} 
-     
-     ${conteudo.value}`
-    
+    conteudoEnviado.innerHTML = `${titulo.value}  ${autor.value} ${conteudo.value}`  
 }
    
