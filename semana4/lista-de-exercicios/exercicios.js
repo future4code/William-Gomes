@@ -5,33 +5,36 @@ function inverteArray(array) {
 }
 
 //Exercício 2
-
+const arrayTest = [1,2,3,4,5,6,7,8]
+const arrayVazio = []
 function retornaNumerosParesElevadosADois (array) {
-  
+
+   array.forEach((elementos) => {
+      if (elementos%2===0) {
+         arrayVazio.push(elementos**2)
+      }
+   })  
+return arrayVazio
 }
 
 //Exercício 3
 
-function retornaNumerosPares (array) {
-   // implemente sua lógica aqui
-}
+
 
 //Exercício 4
 
-function retornaMaiorNumero(array) {
-   // implemente sua lógica aqui
-}
+
 
 //Exercício 5
 
 function retornaQuantidadeElementos (array) {
-   // implemente sua lógica aqui
+   return array.length
 }
 
 //Exercício 6
 
 function retornaExpressoesBooleanas() {
-   // implemente sua lógica aqui
+   
 }
 
 //Exercício 7
