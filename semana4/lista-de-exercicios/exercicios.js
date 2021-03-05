@@ -59,7 +59,19 @@ const respostas = [false, false, true, true, true]
 
 
 function retornaNNumerosPares(n) {
- 
+   const arrayVazio7 = []
+   
+   for (let index = 0;index < n*2; index++) {
+   
+
+   if (index%2===0) {
+     arrayVazio7.push(index)
+  }   
+  
+   }
+  return arrayVazio7  
+
+}
 
 
 // Exercício 8
