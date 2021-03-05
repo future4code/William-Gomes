@@ -19,7 +19,16 @@ return arrayVazio
 
 //Exercício 3
 
-
+function retornaNumerosPares (array) {
+  const arrayVazio3 = []
+   array.forEach((elementos) => {
+      if (elementos%2===0) {
+         arrayVazio3.push(elementos)
+      }
+   })  
+return arrayVazio3
+} 
+retornaNNumerosPares(arrayTest)
 
 //Exercício 4
 
