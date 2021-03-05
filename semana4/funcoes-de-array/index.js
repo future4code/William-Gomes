@@ -6,10 +6,10 @@ imprimirExtrato(arrDespesas)
 // PRIMEIRO
 function imprimirDespesas(despesas){
     let divDespesas = document.getElementById('despesas')
-    divDespesas.innerHTML = `<p><u>Despesas Detalhadas</u></p> <br>`
+    divDespesas.innerHTML = `<p><u>Despesas Detalhadas</u></p>`
 
     despesas.forEach((item) => { 
-        divDespesas.innerHTML += `<p><u>Despesas Detalhadas ${item.valor} || ${item.tipo} || ${item.descricao}</u></p>`
+        divDespesas.innerHTML += `<p><u> R$${item.valor} || ${item.tipo} || ${item.descricao}</u></p>`
     })  
 
 }
@@ -22,18 +22,27 @@ function imprimirExtrato (extrato) {
     let gastoUtilidades = 0
     let gastoViagem = 0
  
-    
- console.log(gastoAlimentacao)
-  
-   let extratoArray = arrDespesas.map((valores) => {
+
+  let extratoArray = arrDespesas.map((valores) => {
     
         return valores.valor
     
     })
-    
-    console.log(gastoAlimentacao)
+   
+   
+   
+   
+   const tipoAlimentacao = arrDespesas.filter((tipos) => {
+       
+    if (tipos.tipo ==="alimentação") {
+        
+    return true
+    }
+        return false
+  })
 
-
+console.log(tipoAlimentacao)
+console.log(gastoAlimentacao)
 }
     // AQUI VEM A IMPLEMENTAÇÃO
 
