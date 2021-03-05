@@ -39,7 +39,7 @@ function retornaMaiorNumero(array) {
    return arrayVazio4
 }
 retornaMaiorNumero(arrayTest)
-console.log(arrayVazio4)
+
 
 
 //Exercício 5
@@ -51,25 +51,29 @@ function retornaQuantidadeElementos (array) {
 //Exercício 6
 
 function retornaExpressoesBooleanas() {
-   
+const respostas = [false, false, true, true, true] 
+   return respostas
 }
 
 //Exercício 7
 
+
 function retornaNNumerosPares(n) {
-   // implemente sua lógica aqui
-}
+ 
+
 
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
-  // implemente sua lógica aqui
+ 
+   
 }
+console.log(checaTriangulo(2,2,2))
 
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   // implemente sua lógica aqui
+   
 }
 
 // Exercício 10
