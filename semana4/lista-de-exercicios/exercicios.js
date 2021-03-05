@@ -44,7 +44,8 @@ console.log(arrayVazio4)
 
 //Exercício 5
 
-
+function retornaQuantidadeElementos (array) {
+   return array.length
 }
 
 //Exercício 6
