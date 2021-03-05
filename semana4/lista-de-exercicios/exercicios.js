@@ -31,13 +31,20 @@ return arrayVazio3
 retornaNNumerosPares(arrayTest)
 
 //Exercício 4
-
+let arrayVazio4 = []
+function retornaMaiorNumero(array) {
+   
+   arrayVazio4 = Math.max(...array)
+ 
+   return arrayVazio4
+}
+retornaMaiorNumero(arrayTest)
+console.log(arrayVazio4)
 
 
 //Exercício 5
 
-function retornaQuantidadeElementos (array) {
-   return array.length
+
 }
 
 //Exercício 6
