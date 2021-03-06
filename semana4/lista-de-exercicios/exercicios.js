@@ -115,23 +115,28 @@ return {
    diferenca: diferenca
    }
 }
-console.log(comparaDoisNumeros(15,3))
+comparaDoisNumeros(15,3)
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
-   
+
 }
 
 //Exercício 11
 
 function ordenaArray(array) {
-   // implemente sua lógica aqui
 }
-
 // Exercício 12
 
 function filmeFavorito() {
-   // implemente sua lógica aqui
+    
+ const filme = {
+      nome: 'O Diabo Veste Prada',
+      ano: 2006,
+      diretor: 'David Frankel',
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt','Stanley Tucci']
+ }
+return filme
 }
 
 // Exercício 13
