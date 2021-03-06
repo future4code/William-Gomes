@@ -199,7 +199,7 @@ function criaRetangulo(lado1, lado2) {
 
 function anonimizaPessoa(pessoa) {
  
-   pessoa = {
+ const pessoa1 = {
       nome: "william", 
       idade: 18,
       email: "williamgofe119@gmail.com.br",
