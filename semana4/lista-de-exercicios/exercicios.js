@@ -77,7 +77,13 @@ function retornaNNumerosPares(n) {
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
- 
+   if(a !== b && b !== c) {
+      return'Escaleno'
+     } else if(a === b && b === c) {
+       return'Equilátero'
+      } else {
+        return'Isósceles'
+      }
    
 }
 console.log(checaTriangulo(2,2,2))
@@ -85,7 +91,8 @@ console.log(checaTriangulo(2,2,2))
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   
+
+
 }
 
 // Exercício 10
