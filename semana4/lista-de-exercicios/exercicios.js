@@ -86,19 +86,40 @@ function checaTriangulo(a, b, c) {
       }
    
 }
-console.log(checaTriangulo(2,2,2))
+checaTriangulo(2,2,2)
 
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
+let maiorNumero;
+let menorNumero ;
+let maiorDivisivelporMenor;
 
-
+if (num1 > num2) {
+   maiorNumero = num1;
+   menorNumero = num2;
+} else {
+   maiorNumero = num2;
+   menorNumero = num1;
 }
 
+maiorDivisivelporMenor = maiorNumero % menorNumero === 0;
+
+
+const diferenca = maiorNumero - menorNumero;
+
+
+return {
+   maiorNumero: maiorNumero,
+   maiorDivisivelporMenor: maiorDivisivelporMenor, 
+   diferenca: diferenca
+   }
+}
+console.log(comparaDoisNumeros(15,3))
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
-   // implemente sua lógica aqui
+   
 }
 
 //Exercício 11
