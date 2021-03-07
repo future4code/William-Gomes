@@ -252,7 +252,10 @@ function multiplicaArrayPor2(array) {
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
-   
+   const novoArray = array.map ((num) => {
+      return (num*2).toString()
+   })
+return novoArray
 }
 
 // Exercício 17, letra C
