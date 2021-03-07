@@ -239,7 +239,7 @@ function menoresDe18(arrayDePessoas) {
 // Exercício 17, letra A
 
 const arrayTest = [1,2,3,4,5,6]
-console.log(arrayTest)
+
 
 function multiplicaArrayPor2(array) {
   const novoArray = array.map((num)=>{
@@ -300,7 +300,7 @@ return novoArray
 
 function retornaPessoasNaoAutorizadas() {
  let variavelaParaCommitNovo =""
- 
+
    let pessoasNaoAutorizadas = []
 
   for (const infos of pessoas) {
@@ -322,7 +322,79 @@ const consultas = [
  ]
 
 function retornaEmailConsulta() {
-  // implemente sua lógica aqui
+   return consultas.map((consulta) => {
+      let emailFinal = "Olá, "
+  
+      if (!consulta.cancelada) {
+        if (consulta.genero === "feminino") {
+          emailFinal += "Sra. "
+        } else {
+          emailFinal += "Sr. "
+        }
+  
+        emailFinal += consulta.nome + ". "
+        emailFinal += "Estamos enviando esta mensagem para "
+  
+        if (consulta.genero === "feminino") {
+          emailFinal += "lembrá-la "
+        } else {
+          emailFinal += "lembrá-lo "
+        }
+  
+        emailFinal += "da sua consulta no dia " + consulta.dataDaConsulta + ". "
+        emailFinal += "Por favor, acuse o recebimento deste-email."
+      } else {
+        if (consulta.genero === "feminino") {
+          emailFinal += "Sra. "
+        } else {
+          emailFinal += "Sr. "
+        }
+  
+        emailFinal += consulta.nome + ". "
+        emailFinal += "Infelizmente sua consulta marcada para o dia "
+        emailFinal += consulta.dataDaConsulta + " foi cancelada. "
+        emailFinal += "Se quiser, pode entrar em contato conosco para remarcá-la."
+      }
+      return emailFinal
+    });
+ 
+   /* return consultas.map((consulta) => {
+     let emailFinal =" Olá, "
+
+     if (!consulta.cancelada) {
+        if (consulta.genero === "feminino") {
+           emailFinal += "Sra. "
+        } else {
+           emailFinal += "Sr. "
+        }
+     
+      emailFinal += consulta.nome + ". "
+     emailFinal += "Estamo enviado esta mensagem para "
+     
+     if (consulta.genero === "feminino") {
+        emailFinal += "lembrá-la"
+     } else {
+        emailFinal += "lembra-lo"
+     }
+      
+   emailFinal += "da sua consulta no dia " + consulta.dataDaConsulta + ". "
+   emailFinal += "Por favor, acusa o recebimento deste-email."
+
+}else { 
+   if (consulta.genero === "feminino") {
+      emailFinal += "Sra. "
+   } else {
+      emailFinal += "Sr. "
+   }
+
+   emailFinal += consulta.nome + ". "
+   emailFinal += "infelizmente sua consulta marcada para o dia"
+   emailFinal += consulta.dataDaConsulta + "foi cancelada. "
+   emailFinal += "Se quiser, pode entrar em contato conosco para remarcá-la"
+}
+
+return emailFinal
+})*/
 }
 
 //Exercício 20
@@ -335,7 +407,45 @@ const contas = [
   { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
   { cliente: "Soter", saldoTotal: 1200, compras: [] }
 ]
+console.log(contas)
 
 function atualizaSaldo() {
-  // implemente sua lógica aqui
+ let novoSaldo = 0
+ 
+
+ contas.forEach((saldos) => {
+      saldos.compras.forEach((valor)=>{
+         novoSaldo += valor
+      })
+      saldos.saldoTotal -= novoSaldo
+ })
+return contas
+   /* contas.forEach((saldos) => {
+    switch (saldos.cliente) {
+    
+      case "João":
+         saldos.saldoTotal = 400
+         break;
+        
+      case "Paula":
+         saldos.saldoTotal = 6260
+         break;
+         
+      case "Pedro":
+         saldos.saldoTotal = -3340
+         break;
+         
+      case "Luciano":
+         saldos.saldoTotal = -1900
+         break;
+          
+      case "Artur":
+         saldos.saldoTotal = 130
+         break;
+          
+      default:
+         break;
+    }
+
+  })*/
 }
