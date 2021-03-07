@@ -299,6 +299,7 @@ return novoArray
 // Exercício 18, letra B
 
 function retornaPessoasNaoAutorizadas() {
+ let variavelaParaCommitNovo =""
  
    let pessoasNaoAutorizadas = []
 
