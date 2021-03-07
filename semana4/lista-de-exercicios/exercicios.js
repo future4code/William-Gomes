@@ -211,7 +211,7 @@ function anonimizaPessoa(pessoa) {
       nome: 'ANÔNIMO'
      }
 }
-console.log(anonimizaPessoa())
+
 // Exercício 16
 
 const arrayDePessoas = [
@@ -224,13 +224,14 @@ const arrayDePessoas = [
 // Exercício 16, letra A
 
 function maioresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
+ const novoArray = arrayDePessoas.filter((pessoas) => {
+    return pessoas.idade >= 18
+ })
+ return novoArray
 }
 
-// Exercício 16, letra B
-
 function menoresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
+ 
 }
 
 // Exercício 17, letra A
