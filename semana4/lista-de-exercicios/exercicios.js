@@ -261,7 +261,16 @@ return novoArray
 // Exercício 17, letra C
 
 function verificaParidade(array) {
-   // implemente sua lógica aqui
+   
+const novoArray = array.map((num) => {
+   if (num % 2 === 0) {
+      return `${num} é par`
+   }    
+   else{
+      return `${num} é ímpar`
+   }   
+})
+return novoArray
 }
 
 // Exercício 18
