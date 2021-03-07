@@ -299,7 +299,16 @@ return novoArray
 // Exercício 18, letra B
 
 function retornaPessoasNaoAutorizadas() {
-   // implemente sua lógica aqui
+ 
+   let pessoasNaoAutorizadas = []
+
+  for (const infos of pessoas) {
+   if (infos.altura < 1.5 || infos.idade < 14 || infos.idade > 60){
+     
+      pessoasNaoAutorizadas.push(infos)
+   }
+  }
+   return pessoasNaoAutorizadas
 }
 
 //Exercício 19
