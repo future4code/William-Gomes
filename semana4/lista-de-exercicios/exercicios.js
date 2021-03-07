@@ -1,11 +1,12 @@
-//Exercício 1
 
+
+//Exercício 1
 function inverteArray(array) {
   return array.reverse ()
 }
 
 //Exercício 2
-const arrayTest = [1,2,3,4,5,6,7,8]
+
 const arrayVazio = []
 function retornaNumerosParesElevadosADois (array) {
 
@@ -28,7 +29,7 @@ function retornaNumerosPares (array) {
    })  
 return arrayVazio3
 } 
-retornaNNumerosPares(arrayTest)
+
 
 //Exercício 4
 let arrayVazio4 = []
@@ -38,8 +39,6 @@ function retornaMaiorNumero(array) {
  
    return arrayVazio4
 }
-retornaMaiorNumero(arrayTest)
-
 
 
 //Exercício 5
@@ -73,7 +72,6 @@ function retornaNNumerosPares(n) {
 
 }
 
-
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
@@ -86,7 +84,7 @@ function checaTriangulo(a, b, c) {
       }
    
 }
-checaTriangulo(2,2,2)
+
 
 // Exercício 9
 
@@ -115,7 +113,7 @@ return {
    diferenca: diferenca
    }
 }
-comparaDoisNumeros(15,3)
+
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
@@ -237,16 +235,24 @@ function menoresDe18(arrayDePessoas) {
   return novoArray
 }
 
+
 // Exercício 17, letra A
 
+const arrayTest = [1,2,3,4,5,6]
+console.log(arrayTest)
+
 function multiplicaArrayPor2(array) {
-   // implemente sua lógica aqui
+  const novoArray = array.map((num)=>{
+     return num*2
+  }) 
+  return novoArray
 }
+
 
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
-  // implemente sua lógica aqui
+   
 }
 
 // Exercício 17, letra C
