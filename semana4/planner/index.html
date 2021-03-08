@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
+    <title>Planner</title>
+</head>
+<body>
+    <header>
+        <form action="">
+            <label for="tarefa" type = reset>Nova tarefa:</label>
+            <input type="text" id="tarefaText" value="" >
+        
+            <select name="dias-semana" id="dias-semana">
+                
+                <option value="domingo">Domingo</option>
+               
+                <option value="segunda">Segunda-feira</option>
+
+                <option  value="terca">Terça-feira</option>
+                <option  value="quarta">Quarta-feira</option>
+                <option  value="quinta">Quinta-feira</option>
+                <option  value="sexta">Sexta-feira</option>
+                <option  value="sabado">Sábado</option>
+                
+            </select>
+        
+            <select name="horario" id="horario">
+                <option value="1hr">1 hora</option>
+                <option value="2hr">2 horas</option>
+                <option value="3hr">3 horas</option>
+                <option value="4hr">4 horas</option>
+                <option value="5hr">5 horas</option>
+                <option value="6hr">6 horas</option>
+                <option value="7hr">7 horas</option>
+                <option value="8hr">8 horas</option>
+                <option value="9hr">9 horas</option>
+                <option value="10hr">10 horas</option>
+                <option value="11hr">11 horas</option>
+                <option value="12hr">00 horas</option>
+
+
+            </select>
+        
+        
+        </form>
+
+        <button onclick="botao()" id = "botao"> Criar tarefa</button>
+        <button onclick="apagar()" id = buton>Apagar</button>
+    </header>
+    <section>
+        <div class="semana">
+            <h3>Domingo</h3>
+            <div id="domingo"></div>
+        </div>
+
+        <div class="semana">
+            <h3>Segunda-feira</h3>
+            <div id="segunda"></div>
+        </div>
+
+        <div class="semana">
+            <h3>Terça-feira</h3>
+            <div id="terca"></div>
+        </div>
+    
+        <div class="semana">
+            <h3>Quarta-feira</h3>
+            <div id="quarta"></div>
+        </div>
+    
+        <div class="semana">
+            <h3>Quinta-feira</h3>
+            <div id="quinta"></div>
+        </div>
+
+        <div class="semana">                    
+            <h3>Sexta-feira</h3>               
+            <div id="sexta"></div>
+        </div>
+
+        <div class="semana">
+            <h3>Sábado</h3>
+            <div id="sabado"></div>
+        </div>
+    </section>
+    
+</body>
+</html>

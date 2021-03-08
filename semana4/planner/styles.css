@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: peachpuff;
+}
+button{
+    margin-left: 8px;
+    border: solid 1px;
+    background-color: rgba(235, 104, 126, 0.322);
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 24px;
+    padding:  4px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+form{
+    border-radius: 8px;
+}
+select:active{
+    border:rgba(235, 104, 126, 0.322); 
+}
+select{
+    background-color: white;
+    border-radius: solid 1px;
+}
+label{
+    font-size: 24px;
+    margin-right: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section {
+    display: flex;
+    justify-content: space-evenly;
+    height: 90vh;
+}
+
+.semana {
+    border: 1px solid rgb(53, 53, 53);
+    width: 14%;
+    padding: 10px;
+    font-size: 15px;
+    background-image:linear-gradient(rgb(155, 248, 155), rgb(221, 243, 140));
+}
+
+#segunda:active{text-decoration: line-through;}
+#terca:active{text-decoration: line-through;}
+#quarta:active{text-decoration: line-through;}
+#quinta:active{text-decoration: line-through;}
+#sexta:active{text-decoration: line-through;}
+#sabado:active{text-decoration: line-through;}
+#domingo:active{text-decoration: line-through;}
+
+@media screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    .semana {
+        font-size: 11px;
+        padding: 0;
+        padding-left: 4px;
+        padding-top: 4px;
+    }
+
+    .semana:first-of-type{
+    padding-left: 0px;
+}
+    .semana:nth-of-type(2){
+        padding-left:0;
+    }
+
+}
