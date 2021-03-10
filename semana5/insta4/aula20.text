@@ -1,0 +1,29 @@
+2. analise do código existente: 
+
+
+3) NAO ENTENDI ESSA PARTE - <SecaoComentario aoEnviar={this.aoEnviarComentario}/> ----- 
+
+LINHA 48 ↑
+
+
+4) icone: imagem / onClickIcone: evento do clicar na imagem / valorContador: quantas vezes foi clicado no curtir. ---- vão para o Post 
+
+5) representa a curtida.]
+
+6) curtido - linha 39 
+    numerodeCurtidas - linha 63
+    comentando - linha 25
+    numeroComentarios - linha 32
+
+8) onClickCurtida aparece "Curtiu!" no console e altera a cor do icone
+
+9) abre o input para comentar e altera o numero de comentarios
+
+10 - 11) o onClick do icone comentario chama a função sessãocomentario e abre o input, assim que der um onClik no botão enviar ativa a função AoEnviar, que fecha o input e adiciona +1 ao numero de comentarios
+
+
+12) entendi o que não tinha entendido kkk , genial demais 
+
+
+
+
