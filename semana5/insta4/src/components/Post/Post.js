@@ -8,7 +8,7 @@ import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
-import {postagens} from '../Postagens/postagens' 
+
 
 class Post extends React.Component {
   state = {
