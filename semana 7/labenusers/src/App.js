@@ -45,7 +45,7 @@ getAllUsers = () => {
 this.setState({nomes:resposta.data})
 console.log(resposta.data)
 }).catch((error) => {
-(alert("Deu algo de errado"))
+alert("Deu algo de errado")
 
 })
 
@@ -78,8 +78,8 @@ criarNome = () => {
 };
 
 render(){
-const rendezirarTodosNomes = this.state.nomes.map ((pessoas) => {
-  <li key ={pessoas.id}> {pessoas.name}</li>
+const renderizarTodosNomes = this.state.nomes.map ((pessoas) => {
+  return <li key ={pessoas.id}> {pessoas.name}</li>
 
 
 })
@@ -122,7 +122,7 @@ const renderizaTelaCorreta = () => {
       Ir para a página de registro
     </button>
 
-    {this.state.nomes.length > 0 ? <ul>{rendezirarTodosNomes}</ul>:(<p>Carregando...</p>)} 
+    {this.state.nomes.length > 0 ? <ul>{renderizarTodosNomes}</ul>:(<p>Carregando...</p>)} 
   
     </div>
 
