@@ -1,6 +1,62 @@
 import React,{useEffect, useState} from 'react'
 import  './App.css';
 import axios from 'axios'
+import styled from 'styled-components'
+
+
+
+const ImageApi = styled.img `
+height:250px;
+padding:80px;
+width:300px;
+margin:auto;
+`
+
+const InfosHome = styled.div `
+color:white;
+font-size:16px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-weight:bold;
+margin-top:-50px;
+
+`
+
+const ConteinerButtons = styled.div `
+background-color:blue;
+bottom:0;
+margin-top:60px;
+display:flex;
+justify-content:space-evenly;
+` 
+
+const Buttons = styled.button `
+height:60px;
+width:60px;
+border-radius:100%;
+`
+const InfosMatches = styled.div`
+color:white;
+display:flex;
+justify-content:space-evenly;
+align-items:center;
+margin-top:16px;
+font-size:20px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+`
+const ImageMatches = styled.img`
+height:80px;
+width:100px;
+border-radius:100px;
+`
+const IconMatches = styled.img `
+ height: 35px;
+  width: 35px;
+  padding:10px;
+` 
+
+
+
+
 
 function App() {
 
@@ -31,8 +87,8 @@ const clear = () =>{
   .then((res) => {
    alert("limpo")
    getMatches()
-  }).catch((err) => {
-    console.log(err)
+  }).catch((e) => {
+    alert(`Error ${e}`)
   })
 }
 
@@ -46,8 +102,8 @@ const getProfileToChoose  = () => {
    setPersona(res.data.profile)
    
    
-  }).catch((err) => {
-    console.log(err)
+  }).catch((e) => {
+    alert(`Error ${e}`)
   })
 }
 
@@ -65,8 +121,10 @@ axios
 .then((res)=>{
   getMatches()
   getProfileToChoose()
+  
 }).catch((e)=>{
-    console.log(e)
+   alert(`Error ${e}`)
+   
 })
 }
 
@@ -81,16 +139,17 @@ axios
   setMatches(res.data.matches)
   
 }).catch((e)=>{
-    console.log(e)
+  alert(`Error ${e.data}`)
 })
 }
 
 const mapMatch = matches.map((pessoas)=>{
   return (
-   <p>{pessoas.name}</p>
-  
-  
- 
+    <InfosMatches>
+     <ImageMatches src = {pessoas.photo} ></ImageMatches> 
+     {pessoas.name}
+    </InfosMatches>
+
     )
 })
 
@@ -107,16 +166,23 @@ console.log(persona)
         <img onClick = {telaFalse} className = "Icon-app" src = "https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/heart-512.png" ></img>
   
       </header>
-      <div className = "Img-conteinner">
+    
+        <ImageApi src = {persona.photo}></ImageApi>
+      
+      <InfosHome>
+        <p>{persona.name}</p>
+       <p>{persona.bio}</p>
+      </InfosHome>
+       
+          <ConteinerButtons>
+        <Buttons onClick = {getProfileToChoose}>X</Buttons>
+        <Buttons onClick = {choosePerson}>❤️</Buttons>
+       
+          </ConteinerButtons>
+      
+         
         
-      <img className = 'img-api' src = {persona.photo} ></img>
-       <p>{persona.name}</p>
-    </div>
-      <div className = "Buttons">
-         <button onClick = {getProfileToChoose}>X</button>
-        <button onClick = {choosePerson}> ❤️ </button>
-        
-      </div>
+   
     </>
   )
     
@@ -133,11 +199,17 @@ console.log(persona)
           <img onClick = {telaTrue} className = "Icon-app" src = "https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/heart-512.png" ></img>
 
         </header>
+    
+     <IconMatches onClick = {clear} src = "https://cdn1.iconfinder.com/data/icons/line-free/24/Recycle_bin_-512.png">
+
+     </IconMatches>
+
+        
         <div>
            {mapMatch}
         </div>
       
-        <button onClick = {clear}>Clear</button>
+       
       </div>
   )
   
