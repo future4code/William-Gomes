@@ -1,15 +1,8 @@
 import React from 'react'
 import {useHistory} from 'react-router-dom'
 import styled from 'styled-components'
-import temas, { ButtonsHomePage } from '../temas/Temas'
+import temas, { ButtonsHomePage, DivFlex} from '../temas/Temas'
 
-
-const DivFlex = styled.div `
-display:flex;
-justify-content:space-around;
-background-image:linear-gradient(midnightblue,plum);
-color: white;
-` 
 
 export default function ListtripPage() {
     const history = useHistory()

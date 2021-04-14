@@ -1,7 +1,7 @@
 import React from 'react'
 import {useHistory} from 'react-router-dom'
 import styled from 'styled-components'
-import temas, { ButtonsHomePage, DivFlex } from '../temas/Temas'
+import temas, { ButtonsHomePage} from '../temas/Temas'
 
 const FlexCadastro = styled.div `
 display:flex;
