@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  height:70vh;
+  width: 50vw;
+  margin: auto;
+  background-color: brown;
+  margin-top: 50px;
+}
+
+header {
+  display: flex;
+  background-color: blue;
+  justify-content:  space-around;
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  justify-items: center;
+  align-content: center;
+}
+.Icon-app{
+  height: 40px;
+}
+
