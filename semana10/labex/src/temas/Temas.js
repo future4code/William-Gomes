@@ -39,5 +39,6 @@ border: none;
   color: white;
   padding: 15px 32px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 16px;  
+  
 `

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import {useHistory} from 'react-router-dom'
 
 
-
 const HomepagePai = styled.div `
 color:white;
 width:50vw;

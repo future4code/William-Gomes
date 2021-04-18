@@ -1,11 +1,11 @@
 import React from 'react'
-import {useHistory} from 'react-router-dom'
 import {useEffect , useState} from 'react'
-import temas, { ButtonsHomePage2, H2} from '../temas/Temas'
+import temas, { ButtonsHomePage, ButtonsHomePage2, H2} from '../temas/Temas'
 import styled from 'styled-components'
-import {DivFlex1} from './LoginPage'
+import {ButtonsHomePage1, DivFlex1} from './LoginPage'
 import axios from 'axios'
 import {token} from '../parameters/Parameters'
+import {useHistory} from 'react-router-dom'
 
 const Icon = styled.img `
 height:25px;
@@ -18,7 +18,7 @@ export default function AdminHomePage() {
     const history = useHistory()
    
     const backToLoginPage  = () => {
-            history.goBack("/login")
+            history.push("/login")
     } 
 
   
@@ -58,37 +58,50 @@ if (!token){
     })
     }
 
-
+    const getTripsDetails  = (id) => {
+        history.push(`/admin/trips/${id}`)
+    } 
+ 
+    const goCreateTripPage  = () => {
+        history.push(`/admin/trips/criar`)
+    } 
 
 
 const mapTrips = trips.map((viagens)=>{
     return (
-    <div>
-      
-        <p key = {viagens.id}> 
         
-         {viagens.name}
-         
-          <button onClick = {() => deleteTrip(viagens.id)}
-          
-          >X</button> 
-          
-          </p>
-       
-    </div>
- 
+    <div>
+        
+         <button
+          key = {viagens.id}
+          onClick = {() => getTripsDetails(viagens.id)}
+          > 
+          {viagens.name}          
+          </button>   
+          <button onClick = {() => deleteTrip(viagens.id)}>X</button> 
+               
+    </div> 
     )
 })
+
+
+
+
+
 return (
         <div>
            <DivFlex1>
             <ButtonsHomePage2 onClick = {backToLoginPage}>Voltar</ButtonsHomePage2>
+
             <H2>Viagens</H2>
+            <button onClick = {goCreateTripPage}>Cadastrar</button>
+    
         </DivFlex1>
                    
             
         {mapTrips}
-          
+       
+         
         </div>
         
             

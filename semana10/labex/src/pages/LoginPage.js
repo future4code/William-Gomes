@@ -4,7 +4,6 @@ import {useState, useEffect} from 'react'
 import temas, { ButtonsHomePage, H2} from '../temas/Temas'
 import styled from 'styled-components'
 import axios from 'axios'
-import {body} from '../parameters/Parameters'
  export const DivFlex1 = styled.div `
 display:flex;
 background-image:linear-gradient(midnightblue,plum);
@@ -77,7 +76,7 @@ const Enter = () => {
     const history = useHistory()
 
     const backToHome  = () => {
-            history.goBack("/")
+            history.push("/")
     } 
     
     
