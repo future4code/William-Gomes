@@ -22,9 +22,10 @@ export default function ListtripPage() {
         
         .then((res)=>{
         setTrips(res.data.trips) 
+        alert("Funcionou!!")
         
         }).catch((e)=>{
-        console.log(e.data)
+        alert("Erro :(")
         })  
         }
    

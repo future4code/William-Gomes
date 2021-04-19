@@ -62,9 +62,10 @@ const Enter = () => {
   .then((res)=>{
       history.push("/admin/trips/list")
       window.localStorage.setItem('token', res.data.token)
+      alert("funcionou")
       
   }).catch((e)=>{
-      console.log(e.data)
+      alert("Erro")
   })
 
 }

@@ -23,7 +23,7 @@ export default function CreateTripPage1(){
 
 
  const handleClick = () => {
-     console.log(form)
+    
      const body = {
         name: form.nome,
         planet: select,
@@ -38,9 +38,9 @@ export default function CreateTripPage1(){
       }
       
      }).then((res)=>{
-        console.log(res.data)
+        alert("Funcionou!!")
      }).catch((e)=>{
-        console.log(e)
+        alert("Erro :(")
      })
      
  }
