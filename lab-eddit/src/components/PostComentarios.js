@@ -1,14 +1,14 @@
 import React from 'react' 
 
-function LoginPage(){
+function PostComentarios(){
 
 return (
     <div>
-        
+        <p>details</p>
     </div>
 )
 
 
 
 }
-export default LoginPage
+export default PostComentarios

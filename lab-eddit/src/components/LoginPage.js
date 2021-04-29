@@ -21,6 +21,9 @@ console.log(form)
 
     const history = useHistory()
 
+
+
+
 const goCadastro = () => {
     history.push('/cadastro')
 }
