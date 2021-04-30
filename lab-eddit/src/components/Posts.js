@@ -2,17 +2,18 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react' 
 import { useHistory } from 'react-router'
 import createPost from './CreatPost'
+import PostComentarios from './PostComentarios'
+import ContextComentarios from '../context/ContextComentarios'
+
 
 function Posts(){
 
 const [posts, setPosts] = useState([])
-const [button, setButton] = useState(false)
-const [comentar, setComentar] = useState([])
+
 
 useEffect(()=>{
     getPosts()
 },[])
-
 
 
 
@@ -29,28 +30,6 @@ const getPosts = () => {
         console.log(e)
     })
 }
-
-
-
-
-
-const like = (id,commentId) => {
-    const body = { 
-        direction: 1 
-    }
-
-    axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}/comment/${commentId}/vote
-    `,body,{
-        headers: {
-            Authorization: token 
-        }
-    }).then((res)=> {
-        console.log(res.data)
-    }).catch((e)=>{
-        console.log(e.data)
-    })
-}
-
 
 const deslike = (id) => {
     const body = { 
@@ -74,27 +53,33 @@ const goCreatePost = () => {
 }
 
 
-const comments = (id) => {
-    axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}`,{
+const goToDetailsPage = (id) => {
+    history.push(`posts/${id}`) 
+}
+
+
+const like = (id,commentId) => {
+    const body = { 
+        direction: 1 
+    }
+
+    axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}/comment/${commentId}/vote
+    `,body,{
         headers: {
             Authorization: token 
         }
     }).then((res)=> {
-        setComentar(res.data.post.comments)
-       
+        console.log(res.data)
+        alert('curtiu')
     }).catch((e)=>{
         console.log(e.data)
     })
 }
 
-const goPostComentario = () => {
-    history.push('/posts/comentarios')
-}
+
 
 const mapPost = posts.map((post)=>{
-
    
-
          return (
         <div>
         <header>
@@ -103,26 +88,29 @@ const mapPost = posts.map((post)=>{
         <h3 key = {post.id}>{post.title}</h3>
         <p>{post.text}</p>
        <div>
+
             <>
-           <span onClick = {() => like(post.id, post.createdAt)}>👍</span>
+           <span onClick = {() => like(post.id)}>👍</span>
             <span>{post.votesCount}</span>
             <span onClick = {() => deslike(post.id)}>👎</span>
         </>
         <>
             <p>{post.commentsCount} comentários</p>
-            <button onClick = {goPostComentario}>Comentar também</button>
-            <>
            
-            </>
+            <button onClick = {() => goToDetailsPage(post.id)}>Comentar também</button>   
         </> 
         
        </div>
+       <>
       
+         
+       </>
         <hr/>
          </div>
    
 )    
 }) 
+
 
 const history = useHistory()
 const goBackLogin = () => {
@@ -133,6 +121,7 @@ const goBackLogin = () => {
 
 return (
     <div>
+        
         <header>
         <button onClick = {goBackLogin}>Sair</button>
         <button onClick = {goCreatePost}>Criar um Post</button>
@@ -140,6 +129,7 @@ return (
  
         </header>
     {mapPost}
+    
    
     </div>
 )
