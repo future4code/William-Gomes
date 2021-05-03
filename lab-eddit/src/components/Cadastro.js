@@ -1,6 +1,25 @@
 import axios from 'axios'
 import React, { useState } from 'react' 
 import {useHistory} from 'react-router'
+import styled from 'styled-components'
+import {Input, Button} from './LoginPage'
+
+const Header = styled.header`
+display:flex;
+flex-direction:column;
+justify-content:center;
+text-align:center;
+`
+const ButtonCadastro = styled.button`
+height:50px;
+font-size:24px;
+background-color:black;
+color:white;
+cursor: pointer;
+`
+const H1 = styled.h1 `
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+`
 
 function Cadastro(){
 
@@ -19,7 +38,7 @@ const handleInputChange = (event) => {
 
     setForm({...form,[name]:value})
 }
-console.log(form)
+
 
 
 
@@ -34,7 +53,7 @@ const signUp  = () => {
        alert("Usuário Cadastrado")
        
     }).catch((e)=>{
-        console.log(e)
+        alert(e)
     })
 }
 
@@ -43,15 +62,21 @@ const signUp  = () => {
 
 return (
     <div>
-        <p>Cadastro</p>
+        <Header>
+            <ButtonCadastro onClick = {goBackLoginPage}>Voltar</ButtonCadastro> 
+             <H1>Cadastro</H1>
+         
+        </Header>
+      
+        
         <div>
-            <button onClick = {goBackLoginPage}>Voltar</button>
+           
             <br/>
           
             <br/>
             
             <br/>
-            <input
+            <Input
             required
             placeholder = 'Nome de Usuário'
             name = "nome"
@@ -60,10 +85,10 @@ return (
             onChange = {handleInputChange}
             >
                 
-            </input>
+            </Input>
             <br/>
 
-            <input
+            <Input
             required 
             onChange = {handleInputChange}
             placeholder = 'Email'
@@ -72,9 +97,9 @@ return (
             value = {form.email}
             >
 
-            </input>
+            </Input>
             <br/>
-            <input
+            <Input
             required
             onChange = {handleInputChange}
             placeholder = 'Senha'
@@ -82,9 +107,9 @@ return (
             value = {form.senha}
             type = 'password'
             >
-            </input>
+            </Input>
             <br/>
-            <button onClick = {signUp}>Cadastrar</button>
+            <Button onClick = {signUp}>Cadastrar</Button>
         </div>
     </div>
 )

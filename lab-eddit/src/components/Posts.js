@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react' 
+import React, { useContext, useEffect, useState } from 'react' 
 import { useHistory } from 'react-router'
 import createPost from './CreatPost'
 import PostComentarios from './PostComentarios'
@@ -10,12 +10,9 @@ function Posts(){
 
 const [posts, setPosts] = useState([])
 
-
 useEffect(()=>{
-    getPosts()
+   getPosts()
 },[])
-
-
 
 const token = window.localStorage.getItem('token')
 
@@ -26,57 +23,21 @@ const getPosts = () => {
         }
     }).then((res)=>{      
         setPosts(res.data.posts)
+       
     }).catch((e)=>{
-        console.log(e)
+       alert(e)
     })
 }
-
-const deslike = (id) => {
-    const body = { 
-        direction: -1 
-    }
-
-    axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}/vote`,body,{
-        headers: {
-            Authorization: token 
-        }
-    }).then((res)=> {
-        console.log(res.data)
-    }).catch((e)=>{
-        console.log(e.data)
-    })
-}
-
 
 const goCreatePost = () => {
  history.push('/create')
 }
 
 
-const goToDetailsPage = (id) => {
-    history.push(`posts/${id}`) 
+const goToDetailsPage = (id,votes) => {
+    history.push(`posts/${id}/${votes}`) 
+    
 }
-
-
-const like = (id,commentId) => {
-    const body = { 
-        direction: 1 
-    }
-
-    axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}/comment/${commentId}/vote
-    `,body,{
-        headers: {
-            Authorization: token 
-        }
-    }).then((res)=> {
-        console.log(res.data)
-        alert('curtiu')
-    }).catch((e)=>{
-        console.log(e.data)
-    })
-}
-
-
 
 const mapPost = posts.map((post)=>{
    
@@ -88,16 +49,11 @@ const mapPost = posts.map((post)=>{
         <h3 key = {post.id}>{post.title}</h3>
         <p>{post.text}</p>
        <div>
-
-            <>
-           <span onClick = {() => like(post.id)}>👍</span>
-            <span>{post.votesCount}</span>
-            <span onClick = {() => deslike(post.id)}>👎</span>
-        </>
+            <p>curtidas: {post.votesCount}</p>
         <>
             <p>{post.commentsCount} comentários</p>
            
-            <button onClick = {() => goToDetailsPage(post.id)}>Comentar também</button>   
+            <button onClick = {() => goToDetailsPage(post.id,post.votesCount)}>Comentar também</button>   
         </> 
         
        </div>
@@ -120,15 +76,16 @@ const goBackLogin = () => {
 }
 
 return (
+    
     <div>
         
         <header>
         <button onClick = {goBackLogin}>Sair</button>
         <button onClick = {goCreatePost}>Criar um Post</button>
         <p>Posts</p>
- 
         </header>
-    {mapPost}
+        
+  {mapPost}
     
    
     </div>

@@ -18,7 +18,7 @@ const Rotas = () => {
 
         <Route exact path="/posts" component={Posts} />
 
-        <Route exact path="/posts/:id" component={PostComentarios} />
+        <Route exact path="/posts/:id/:votes" component={PostComentarios} />
 
         <Route exact path="/create" component={createPost} />
 
