@@ -1,21 +1,22 @@
 import React from "react";
 import './App.css';
 import axios from 'axios'
+import {baseUrl, configHeader} from './parameters'
 
 
 
 export default class App extends React.Component {
 
 state = {
-  telaLogin: true, 
+
+  tela: "login", 
   inputUserName: "",
   inputUserEmail: "",
-  nomes: []
-}
+  nomes: [],
+
 
 componentDidMount() {
   this.getAllUsers();
-}
 
 handleUserName = (event) => {
   this.setState({inputUserName:event.target.value})
@@ -23,71 +24,121 @@ handleUserName = (event) => {
 
 handleUserEmail = (event) => {
   this.setState({inputUserEmail:event.target.value})
- 
+
+
 }
 getAllUsersButton = () => {
-  this.setState({telaLogin:true})
+  this.setState({tela:"login"})
 }
 listen = () => {
-this.setState({telaLogin:false})
+this.setState({tela:"todosUsuarios"})
 }
 
 
-getAllUsers = () => {
-  axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users',{
 
-  headers: {
-    Authorization: "william-gomes-cruz"
-  }
-  
-}).then((resposta) =>{
+      getAllUsers = () => {
+      axios.get(baseUrl,configHeader)
+        
+      .then((resposta) =>{
 
-this.setState({nomes:resposta.data})
-console.log(resposta.data)
-}).catch((error) => {
-alert("Deu algo de errado")
+      this.setState({nomes:resposta.data})
+      console.log(resposta.data)
+      })
 
-})
+      .catch((error) => {
+      alert("Deu algo de errado")
 
-}
+      })
 
-criarNome = () => {
- 
-  const  body = {
-    name:this.state.inputUserName,
-    email: this.state.inputUserEmail
-  }
+      }
 
-  axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users', body, {
+      getUserById = async (id) => {
+        
+        const body = {
+          email: this.state.inputUserEmail,
+          name: this.state.inputUserName,
+         
+        }
 
-  headers: {
+        try{
+          const response = await axios.get(`${baseUrl}/${id}`, body,configHeader)
+        
+          this.getAllUsers()
+        }catch(error){
+          alert("Deu algo de errado")
+
+        }
+
+      }
     
-   Authorization:'william-gomes-cruz'
+      deleteUser = async (id) => {
+        if (window.confirm ("Deseja mesmo excluir este usuário?")){
+          try{
+      const response = await axios.delete(`${baseUrl}/${id}`, configHeader)
+    
+      this.getAllUsers()
     }
-}).then((resposta) => {
- this.getAllUsers()
-  this.setState({inputUserEmail: ""})
-  this.setState({inputUserName: ""})
- console.log(resposta.data)
-  
-}).catch((error)=> {
-{(alert("deu tudo errado"))}
+      catch(error) {
+        alert("Deu algo de errado")
+        
+      }
+        }
+      
 
-})
+      }
 
-};
+      criarNome = () => {
+      
+      const  body = {
+      name:this.state.inputUserName,
+      email: this.state.inputUserEmail
+      }
+
+      axios.post(baseUrl, body, configHeader)
+        
+      .then((resposta) => {
+      this.getAllUsers()
+      this.setState({inputUserEmail: ""})
+      this.setState({inputUserName: ""})
+      alert("Usuário criado!")
+        
+      })
+
+      .catch((error)=> {
+      {alert("deu tudo errado")}
+
+      })
+
+      };
+
+
+
+
 
 render(){
-const renderizarTodosNomes = this.state.nomes.map ((pessoas) => {
-  return <li key ={pessoas.id}> {pessoas.name}</li>
+  const renderizarTodosNomes = this.state.nomes.map ((pessoas) => {
+    return(
+      <div key ={pessoas.id}>
+        
+          <li > {pessoas.name} </li>
+      
+          <button onClick = {() => this.deleteUser(pessoas.id)}
+          
+          >Deletar</button>
 
+          <button onClick = {() => {this.getUserById(pessoas.id)}}
+          
+          >Detalhes</button>
+      </div> 
+    ) 
+  
+  })
+ 
 
-})
+const renderizaTelaCorreta = (pessoasId) => {
 
+  if (this.state.tela === "login"){
 
-const renderizaTelaCorreta = () => {
-
-  if (this.state.telaLogin === true){
 
    return(
 <div>
@@ -114,21 +165,32 @@ const renderizaTelaCorreta = () => {
  ) 
 
 
+
+}else if (this.state.tela === "todosUsuarios"){
+  return(
+    
+=======
 }else{
   return(
-    <div>
+
  
    <button onClick = {this.getAllUsersButton}>
       Ir para a página de registro
     </button>
 
-    {this.state.nomes.length > 0 ? <ul>{renderizarTodosNomes}</ul>:(<p>Carregando...</p>)} 
-  
+
+    {this.state.nomes.length > 0 
+    
+    ? <ul>{renderizarTodosNomes}</ul>
+         
+   :(<p>Sem Usuário</p>)} 
+   
+
+
     </div>
 
   )
 
-}
 
 
 }
