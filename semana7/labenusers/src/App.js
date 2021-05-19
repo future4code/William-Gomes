@@ -4,20 +4,19 @@ import axios from 'axios'
 import {baseUrl, configHeader} from './parameters'
 
 
+
 export default class App extends React.Component {
 
 state = {
+
   tela: "login", 
   inputUserName: "",
   inputUserEmail: "",
   nomes: [],
-  
-}
+
 
 componentDidMount() {
   this.getAllUsers();
- 
-}
 
 handleUserName = (event) => {
   this.setState({inputUserName:event.target.value})
@@ -25,6 +24,7 @@ handleUserName = (event) => {
 
 handleUserEmail = (event) => {
   this.setState({inputUserEmail:event.target.value})
+
 
 }
 getAllUsersButton = () => {
@@ -139,6 +139,7 @@ const renderizaTelaCorreta = (pessoasId) => {
 
   if (this.state.tela === "login"){
 
+
    return(
 <div>
     <button onClick = {this.listen}>Ir para página de lista</button>
@@ -164,14 +165,19 @@ const renderizaTelaCorreta = (pessoasId) => {
  ) 
 
 
+
 }else if (this.state.tela === "todosUsuarios"){
   return(
     
-    <div>
+=======
+}else{
+  return(
+
  
    <button onClick = {this.getAllUsersButton}>
       Ir para a página de registro
     </button>
+
 
     {this.state.nomes.length > 0 
     
@@ -180,22 +186,11 @@ const renderizaTelaCorreta = (pessoasId) => {
    :(<p>Sem Usuário</p>)} 
    
 
-    </div>
-
-  )
-
-}/*else {
-  return (
-
-    <div>
-      <button onClick = {this.listen}>Voltar</button>
-
-     
 
     </div>
 
   )
-}*/
+
 
 
 }

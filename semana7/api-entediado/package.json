@@ -1,5 +1,5 @@
 {
-  "name": "labenusers",
+  "name": "api-entediado",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,9 +8,6 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "react": "^17.0.2",
-
-    "react-components": "^0.5.1",
-
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.1",
