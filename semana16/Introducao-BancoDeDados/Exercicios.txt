@@ -1,0 +1,19 @@
+##Exercicio1
+###A) **Show Databases:** Me traz onde esta sendo executado meu código e a informação do schem. 
+**Show Tables:**: Me traz o tipo do projeto e onde esta alocado. 
+
+###B)**Describle Actor:** Me traz os tipos das colunas.
+
+
+##Exercicio 2 
+###B)**Erro:** Id é um numero exclusivo e você tentou utiliza-lo duas vezes (duplicando-o).
+
+
+##Exercicio 3 
+###D)**"invalid":** Me retorna uma tabela sem ninguem. 
+
+###E)**"Erro?":**  *SELECT id, nome from Actor WHERE id = "002" Esse código não me retornou um erro já que eu tinha criado um user com esse id*
+
+
+##Exercicio 4 
+###A)Ela visualiza se há alguem com a letra inicial do nome A ou J e se essa pessoa recebe mais de 300.000 mil 
