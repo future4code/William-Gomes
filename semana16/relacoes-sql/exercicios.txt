@@ -1,0 +1,22 @@
+##Exercicio1
+###**A)** Chave estrangeira é um id de outra tabela.
+
+
+###**C)** *Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`cruz-2114958-william-ferreira`.`Rating`, CONSTRAINT `Rating_ibfk_1` FOREIGN KEY (`movie_id`) REFERENCES `Filmes` (`id`))* ------ Ele não encontrou a referencia da chave estrangeira na outra tabela. 
+
+###**E)** *Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+*
+
+
+##Exercicio2
+###**A)** Ela relaciona um id de um filme com o id de um ator. 
+
+###**C)** Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`cruz-2114958-william-ferreira`.`MovieCast`, CONSTRAINT `MovieCast_ibfk_1` FOREIGN KEY (`movie_id`) REFERENCES `Filmes` (`id`)) --- ela não encontrou um filme com esse id.
+ 
+###**D)** Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+
+
+##Exercicio3
+###**A)** A relação entre os Id's. 
+
+ 
