@@ -1,0 +1,15 @@
+##EX1 
+
+*###A)*Sim, acredito que com strings poderemos combinar mais formas por conta da diversidade de letras.
+
+##EX2
+
+*###A)*Estamos criando um usuário que necessita de um id,email e senha e inserindo-o na tabela.
+
+##EX3
+
+*###A)*Pois o token vem no tipo Number.
+
+##EX7
+
+*###A)*Deixa com que o valor receba qualquer tipo.
