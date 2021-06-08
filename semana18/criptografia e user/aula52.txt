@@ -1,0 +1,4 @@
+**#Exercicio2** 
+
+**##A)** O cadastro, pois o usuário não ira conseguir se a sua senha não estiver decodificada
+
