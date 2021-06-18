@@ -3,8 +3,7 @@ enum POST_TYPES {
     EVENT = "event"
  }
  
- export type post = {
-    id: string,
+ export type postData = {
     photo: string,
     description: string,
     type: POST_TYPES,
@@ -12,3 +11,4 @@ enum POST_TYPES {
     authorId: string
  }
  
+ export type post = postData & { id: string }

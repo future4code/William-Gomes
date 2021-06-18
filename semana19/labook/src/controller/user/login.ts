@@ -1,5 +1,5 @@
-import { Request, Response } from "express"
-import { loginBusiness } from "../../business/user/loginBusiness"
+import { Request, Response } from "express";
+import { LoginBusiness } from "../../business/user/loginBusiness"
 
 
 export const login = async (
@@ -9,7 +9,7 @@ export const login = async (
     try {
        const { email, password } = req.body
  
-       const token: string = await loginBusiness(email, password)
+       const token: string = await LoginBusiness(email, password)
  
        res.send({
           message: "Usuário logado!",

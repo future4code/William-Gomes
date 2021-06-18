@@ -1,9 +1,9 @@
 import { compare } from "../../services/hashManager"
 import { generateToken } from "../../services/authenticator"
 import { user } from "../../model/user"
+import { selectUserByEmail } from "../../data/user/selectUserByEmail"
 
-
-export const loginBusiness = async (
+export const LoginBusiness = async (
     email:string, 
     password:string
 ) => {
@@ -16,21 +16,7 @@ if (!email || !password) {
    throw new Error(message)
 }
 
-const queryResult: any = await connection("labook_users")
-   .select("*")
-   .where({ email })
-
-if (!queryResult[0]) {
-   message = "Invalid credentials"
-   throw new Error(message)
-}
-
-const user: user = {
-   id: queryResult[0].id,
-   name: queryResult[0].name,
-   email: queryResult[0].email,
-   password: queryResult[0].password
-}
+const user: user = await selectUserByEmail(email)
 
 const passwordIsCorrect: boolean = await compare(password, user.password)
 
@@ -43,6 +29,8 @@ if (!passwordIsCorrect) {
 const token: string = generateToken({
    id: user.id
 })
+
+return token
 }
 
 

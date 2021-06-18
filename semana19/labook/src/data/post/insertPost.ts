@@ -1,7 +1,7 @@
 import { connection } from "../../connection";
 import { post } from "../../model/post";
 
-export const InsertPost = async (
+export const insertPost = async (
     post:post
 ) => {
     await connection("labook_posts")
@@ -10,6 +10,6 @@ export const InsertPost = async (
    photo:post.photo,
    description:post.description,
    type:post.type,
-   author_id: tokenData.id
+   author_id: post.authorId
 })
 }
