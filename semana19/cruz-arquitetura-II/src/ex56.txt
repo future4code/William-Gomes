@@ -1,0 +1,6 @@
+##Exercicio4
+
+**A)**validar se o USER_ROLE é admin ou normal
+
+**B)** trocar o return do selectUserByEmail
+
